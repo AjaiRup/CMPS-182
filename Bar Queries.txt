@@ -1,0 +1,16 @@
+Bars
+1. 	SELECT beer, price
+	FROM Sells
+	WHERE bar = 'Blue Angel';
+2.	SELECT name, phone
+	FROM Likes, Drinkers
+	WHERE drinker = name AND beer = 'Budweiser';
+3.	SELECT bar
+	FROM Frequents x, Frequents y
+	WHERE x.bar = y.bar AND
+		  x.drinker = 'Vince' AND y.drinker = 'Herb';
+4.	SELECT bar
+	FROM Bars
+	WHERE city = 'Chicago' AND
+		((addr IS NOT NULL AND phone is NULL) OR
+		(addr IS NULL AND phone IS NOT NULL));

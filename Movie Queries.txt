@@ -1,0 +1,26 @@
+Movies
+1.	SELECT title, length
+	FROM Movies
+	WHERE genre = 'Comedy' AND year = 2004;
+	
+2.	SELECT name, gender
+	FROM MovieStar
+	WHERE birthdate > DATE '1960-12-31';
+	
+3.	SELECT starName
+	FROM StarsIn, MovieStar
+	WHERE movieTitle = 'Avatar' AND movieYear = 2009 AND starName = name AND gender = 'm';
+	
+4.	SELECT starName
+	FROM StarsIn, Movies
+	WHERE movieTitle = title AND movie AND movieYear = year AND year = 2015 AND studioName = 'MGM';
+	
+5.	SELECT MovieExec.name
+	FROM MovieExec, Studio
+	WHERE cert# = presC# AMD Studio.name = 'MGM';
+	
+6.	SELECT title, year
+	FROM Movies 
+	WHERE length > (SELECT length
+					FROM Movies
+					WHERE title = 'Avatar' AND year = 2009);
