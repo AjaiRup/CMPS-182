@@ -1,0 +1,8 @@
+CityBooksDB
+
+books (title, author_id)
+- Primary key: (title, author_id)
+author (id, first_name, last_name)
+- Primary key: (id)
+customers (last_name, first_name, phone_number, customer_id)
+- Primary key: (customer_id)
